@@ -35,4 +35,14 @@ ciudades =
   "Sevilla"]
   
   
-          
+respuesta = requests.get('http://api.openweathermap.org/data/2.5/weather',params={'q':'%s,spain' % ciudades[1]})
+
+dicci = json.loads(respuesta.text)
+
+tempemin = dicci["main"]["tem_min"] 
+tempemax = dicci["main"]["tem_max"]
+viento = dicci["wind"]["speed"]
+direccionviento = dicci["wind"]["deg"]
+#añadimos la peticion de grados reales
+
+
