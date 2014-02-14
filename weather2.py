@@ -44,5 +44,7 @@ tempemax = dicci["main"]["tem_max"]
 viento = dicci["wind"]["speed"]
 direccionviento = dicci["wind"]["deg"]
 #añadimos la peticion de grados reales
+tempre = tempe - 273
 
+print "la temperatura actual de %s es de %s C" % (ciudades(peti),tempre) 
 
