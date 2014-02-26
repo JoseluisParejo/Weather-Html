@@ -5,7 +5,6 @@ import jinja2
 from jinja2 import Template
 
 def direcviento(direccion):
-#Ahora calcularemos la direccion del viento por grado
          for grado in str(direccion):
                   if direccion >= 337.5 and direccion < 22.5:
                            return "N"
@@ -43,10 +42,10 @@ tempemin = dicci["main"]["tem_min"]
 tempemax = dicci["main"]["tem_max"]
 viento = dicci["wind"]["speed"]
 direccionviento = dicci["wind"]["deg"]
-#añadimos la peticion de grados reales
-tempreminreal = round(tempemin - 273)
-tempremaxreal = round(tempemax - 273)
-vientoreal = round(viento * 1.61)
+
+tempreminreal = round(tempemin - 273,1)
+tempremaxreal = round(tempemax - 273,1)
+vientoreal = round(viento * 1.61,1)
 
 print "la temperatura actual de %s es de %s grados centigrados, la maxima es de %s, y la velocidad del viento es de %s km/h direccion %s" % (ciudades(1),tempreminreal,tempremaxreal, vientoreal, direccionviento) 
 
