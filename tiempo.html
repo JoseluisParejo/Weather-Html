@@ -4,8 +4,10 @@
           <title> El tiempo en Andalucia </title>
     </head>
     <body>
-    <h1>El tiempo en Andalucía</h1>
-    <h2>{{ ciudades }}</h2>
+        <h1>El tiempo en Andalucía</h1>
+    	{% set count = 0 %}
+        {% for provincia in provincias %}
+        <h2>{{ ciudades }}</h2>
         <ul>
             
         	<li>Temperatura mínima prevista: {{ tempreminreal }} C</li>
