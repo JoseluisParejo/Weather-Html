@@ -23,15 +23,7 @@ def direcviento(direccion):
                   elif direccion >= 292.5 and direccion < 337.5:
                            return "NO"
           
-ciudades = """
-  "Almeria",
-  "Cadiz",
-  "Cordoba",
-  "Granada",
-  "Huelva",
-  "Jaen",
-  "Malaga",
-  "Sevilla" """
+ciudades = ['Almeria','Cadiz','Cordoba','Huelva','Jaen','Malaga','Sevilla']
   
   
 respuesta = requests.get('http://api.openweathermap.org/data/2.5/weather',params={'q':'%s,spain' % ciudades[1]})
